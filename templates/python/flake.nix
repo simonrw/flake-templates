@@ -22,7 +22,7 @@
           python-dev = pkgs.mkShell {
             buildInputs = with pkgs; [
               pkgs.python3
-              pkgs.python3.venvShellHook
+              pkgs.python3.pkgs.venvShellHook
             ];
 
             venvDir = ".venv";
