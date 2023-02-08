@@ -27,7 +27,9 @@
 
             venvDir = ".venv";
 
-            postVenvCreation = ":";
+            postVenvCreation = ''
+              python -m pip install pip-tools
+            '';
           };
         };
       }
