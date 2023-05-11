@@ -24,7 +24,7 @@
           default = rust-dev;
           rust-dev = pkgs.mkShell {
             buildInputs = with pkgs; [
-              rust-bin.beta.latest.default
+              (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
               rust-analyzer
               clippy
               rustfmt
